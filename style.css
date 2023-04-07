@@ -1,0 +1,748 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+    user-select: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ----------------- custom variable ---------------------------- */
+:root {
+    --aqua: rgb(2, 84, 90);
+    --light-aqua: rgb(54, 203, 214);
+    --black: #070606;
+    --light-black: #3d3c3c;
+    --border: 1px solid #080606;
+    --white: #fff;
+    --box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--black);
+}
+
+
+.btn {
+    background: var(--aqua);
+    color: var(--white);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+    background: var(--light-aqua);
+    color: var(--light-black);
+}
+
+
+section {
+    padding: 1.8rem 13rem;
+}
+
+
+/* ------------------------------ header section  ------------------------------- */
+
+.header .header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 1.8rem 13rem;
+
+}
+
+.header .header-div .logo {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: var(--light-black);
+}
+
+.header .header-div .logo i {
+    color: var(--light-aqua);
+}
+
+.header .header-div .form-search {
+    width: 35rem;
+    height: 4rem;
+    background: var(--white);
+    border: var(--border);
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.header .header-div .form-search input {
+    font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+    color: var(--black);
+    padding: 0 1.3rem;
+    text-transform: none;
+}
+
+.header .header-div .form-search label {
+    color: var(--black);
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-right: 1.2rem;
+}
+
+.header .header-div .form-search label:hover {
+    color: var(--light-aqua);
+}
+
+.header .header-div .icon-btns div,
+.header .header-div .icon-btns a {
+    font-size: 1.8rem;
+    color: var(--light-black);
+    cursor: pointer;
+    margin-left: 1.3rem;
+
+}
+
+.header .header-div .icon-btns a {
+    text-decoration: none;
+}
+
+.header .header-div .icon-btns div:hover,
+.header .header-div .icon-btns a:hover {
+    color: var(--light-aqua);
+}
+
+#search-btn {
+    display: none;
+}
+
+.header .header-link {
+    background: var(--light-aqua);
+}
+
+.header .header-link .navbar {
+    text-align: center;
+}
+
+.header .header-link .navbar a {
+    color: var(--white);
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header .header-link .navbar a:hover {
+    color: var(--light-black);
+}
+
+
+
+.header .header-link.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+
+/* ------------------------------------- home section styling here ---------------------------- */
+.home {
+    background: url(./img/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 6em;
+}
+
+
+.home .row .row-text {
+    flex: 1 1 42rem;
+}
+
+
+.home .row .row-book {
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 5.5rem;
+
+}
+
+.home .row .row-book a img {
+    height: 25rem;
+    margin: 0.7rem;
+}
+
+.home .row .row-book a:hover img {
+    transform: scale(0.9);
+}
+
+
+.home .row .row-book hr {
+    width: 90%;
+    margin-left: 3rem;
+    height: 1rem;
+    background-color: var(--aqua);
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    margin-top: -0.7rem;
+
+}
+
+.home .row .row-text h2 {
+    color: var(--black);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.home .row .row-text p {
+    color: var(--light-black);
+    font-size: 1.6rem;
+    line-height: 2;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ------------------------------ support icon section styling here --------------------------------- */
+
+.icon-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 8rem;
+    padding: 8rem 13rem;
+    background: #faf5f5;
+    background: linear-gradient(50deg, #abdcf3 20%, #eee 30%);
+    box-shadow: var(--box-shadow);
+}
+
+.icon-section .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    padding: 2.2rem 0;
+}
+
+.icon-section .icons i {
+    font-size: 3.6rem;
+    color: var(--aqua);
+}
+
+.icon-section .icons p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+}
+
+
+/* ------------------------------------------ Listed Book Section ----------------------------------- */
+
+
+
+.heading {
+    text-align: center;
+    position: relative;
+    margin: 5rem 0;
+}
+
+.heading span {
+    font-size: 3rem;
+    padding: 3rem 2rem;
+    color: var(--black);
+    background: #fff;
+}
+
+.listed-book {
+    padding-bottom: 12rem;
+    margin-top: 3rem;
+}
+
+.listed-book .listed-book-slider .box {
+    width: 25rem;
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 0;
+    cursor: grabbing;
+}
+
+.listed-book .listed-book-slider .box:hover {
+    border: 0.01rem solid var(--aqua);
+    padding: 3rem;
+    margin: 2rem 0;
+}
+
+.listed-book .listed-book-slider .box .image {
+    padding: 1rem;
+    background: linear-gradient(15deg, #eeebeb 30%, #fff 30%);
+    object-position: center;
+    object-fit: cover;
+}
+
+.listed-book .listed-book-slider .box .image img {
+    height: 30rem;
+    max-width: 100%;
+}
+
+.listed-book .listed-book-slider .box .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    transform: translateY(-100%);
+}
+
+.listed-book .listed-book-slider .box:hover .icons {
+    transform: translateY(0%);
+}
+
+.listed-book .listed-book-slider .box .icons a {
+    color: var(--black);
+    font-size: 2.3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+
+.listed-book .listed-book-slider .box .icons a:hover {
+    background-color: var(--aqua);
+    color: #fff;
+}
+
+.listed-book .listed-book-slider .box .content {
+    background-color: #eee;
+    padding: 1.5rem;
+}
+
+.listed-book .listed-book-slider .box .content .price {
+    font-size: 2.3rem;
+    color: var(--black);
+    padding-bottom: 2rem;
+}
+
+.listed-book .listed-book-slider .box .content .price span {
+    text-decoration: line-through;
+    font-size: 1.6rem;
+    color: var(--light-black);
+}
+
+
+/* -----------------------------newsletter section styles ------------------------------------------ */
+
+.newsletter {
+    padding: 0rem 13rem;
+    padding-bottom: 4rem;
+    margin-top: 4rem;
+    background: linear-gradient(50deg, #abdcf3 20%, #eee 30%);
+    box-shadow: var(--box-shadow);
+}
+
+.newsletter form {
+    max-width: 45rem;
+    margin: auto;
+    text-align: center;
+    padding: 6rem 0;
+
+}
+
+
+.newsletter form h2 {
+    font-size: 2.3rem;
+    color: var(--light-black);
+    font-weight: 600;
+    padding-bottom: .9rem;
+}
+
+.newsletter form .box {
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.7rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    border-radius: 0.5rem;
+    text-transform: none;
+    border-bottom: 0.1rem solid var(--light-black);
+    background: var(--light-aqua);
+}
+
+
+
+/* -------------------------------------------- Review Section Styling here  -------------------------------------- */
+.review {
+    padding: 4rem 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
+    margin-top: 4rem;
+
+}
+
+.review .reviews-slider .box {
+    width: 20rem;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    cursor: grabbing;
+}
+
+
+.review .reviews-slider .box:hover {
+    padding: 3rem;
+}
+
+.review .reviews-slider .box h3 {
+    color: var(--black);
+    font-size: 2.3rem;
+    padding: 3rem 0;
+}
+
+.review .reviews-slider .box p {
+    color: var(--light-black);
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
+    line-height: 2;
+}
+
+.review .reviews-slider .box .stars i {
+    font-size: 1.4rem;
+    color: var(--aqua);
+}
+
+
+
+/* --------------------------------------------  Footer Section Styling here  -------------------------------------- */
+
+
+footer {
+    padding: 10rem 13rem 4rem;
+    margin-top: 3rem;
+    background: linear-gradient(50deg, #abdcf3 20%, #eee 30%);
+
+}
+
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.3rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    color: var(--aqua);
+    padding-right: 0.5rem;
+}
+
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+
+.footer .copy {
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    color: var(--light-black);
+    text-align: center;
+
+}
+
+.footer .copy span {
+    color: var(--aqua);
+}
+
+
+.footer .box-container .contact a {
+    text-transform: none !important;
+}
+
+
+
+
+
+/* -------------------------------------- login-form styling ---------------------------------*/
+
+.login-form-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(250, 250, 250, 0.979);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 999;
+
+}
+
+.login-form-container.active {
+    right: 0;
+}
+
+
+.login-form-container form {
+    background: var(--white);
+    border: var(--border);
+    width: 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.7rem;
+}
+
+.login-form-container form h2 {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+
+.login-form-container form label {
+    display: block;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+}
+
+.login-form-container form .input-box {
+    width: 100%;
+    color: var(--black);
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    text-transform: none;
+    padding: 1.1rem;
+    font-weight: 500;
+    border-bottom: 0.1rem solid var(--light-black);
+
+}
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form .checkbox label {
+    font-size: 1.6rem;
+    color: var(--light-black);
+    cursor: pointer;
+}
+
+.login-form-container form .btn {
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.login-form-container form p {
+    color: var(--light-black);
+    font-size: 1.6rem;
+    padding-top: 0.8rem;
+}
+
+.login-form-container form p a {
+    color: var(--aqua);
+    text-decoration: underline;
+}
+
+.login-form-container form p a:hover {
+    color: var(--light-aqua);
+}
+
+
+/* ------------------------------------------ close login btn --------------------------------------- */
+.login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------- footer nav links styles ----------------------------------- */
+
+.footer-nav {
+    text-align: center;
+    background: var(--aqua);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+}
+
+
+.footer-nav a {
+    font-size: 2rem;
+    color: var(--white);
+    padding: 2rem;
+}
+
+.footer-nav a:hover {
+    background: var(--light-black);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------- media query  --------------------------------------- */
+
+@media(max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header .header-div {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    section {
+        padding: .8rem 7rem;
+    }
+}
+
+@media(max-width: 768px) {
+
+    /* html {
+        scroll-padding-top: 0;
+    } */
+
+    body {
+        padding-bottom: 6rem;
+    }
+
+    .header .header-link {
+        display: none;
+    }
+
+    .header .header-div {
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-div .form-search {
+        position: absolute;
+        width: 90%;
+        top: -110%;
+        right: 1.5rem;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header-div .form-search.active {
+        top: 110%;
+    }
+
+    .home .row .row-text {
+        text-align: center;
+    }
+
+    .home .row .row-text h2 {
+        font-size: 3.6rem;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
+    .footer-nav {
+        display: block;
+        text-decoration: none
+    }
+
+    .footer .copy {
+        margin-top: 1.2rem;
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .review .reviews-slider .box {
+        width: 23rem;
+        padding: auto;
+    }
+
+}
